@@ -1,0 +1,23 @@
+{
+  "name": "pdf-merger",
+  "version": "1.0.0",
+  "description": "Merge multiple PDF files together",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danixar/pdf-merger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danixar/pdf-merger/issues"
+  },
+  "homepage": "https://github.com/Danixar/pdf-merger#readme",
+  "dependencies": {
+    "pdf-lib": "^1.14.1"
+  }
+}
