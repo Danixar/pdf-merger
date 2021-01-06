@@ -6,7 +6,6 @@ const merge = async (name: string, ...pdfs: string[]) => {
 
 	const doc = await PDFDocument.create();
 
-	console.log('looping');
 	for (const pdfName of pdfs) {
 		const pdf = await PDFDocument.load(fs.readFileSync(pdfName));
 		const content = await doc.copyPages(pdf, pdf.getPageIndices());
