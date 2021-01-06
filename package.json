@@ -1,23 +1,28 @@
 {
-  "name": "pdf-merger",
-  "version": "1.0.0",
-  "description": "Merge multiple PDF files together",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Danixar/pdf-merger.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Danixar/pdf-merger/issues"
-  },
-  "homepage": "https://github.com/Danixar/pdf-merger#readme",
-  "dependencies": {
-    "pdf-lib": "^1.14.1"
-  }
+	"name": "pdf-merger",
+	"version": "1.0.0",
+	"description": "Merge multiple PDF files together",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Danixar/pdf-merger.git"
+	},
+	"keywords": [],
+	"author": "Evan Wiegers",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Danixar/pdf-merger/issues"
+	},
+	"homepage": "https://github.com/Danixar/pdf-merger#readme",
+	"dependencies": {
+		"pdf-lib": "^1.14.1"
+	},
+	"devDependencies": {
+		"@types/node": "^14.14.20",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.1.3"
+	}
 }
