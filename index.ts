@@ -11,9 +11,14 @@ const merge = async (name: string, ...pdfs: string[]) => {
 	console.log('looping');
 	for (const pdfName of pdfs) {
 		console.log(`looping: ${pdfName}`);
+		console.log('creating pdf');
 		const pdf = await PDFDocument.load(fs.readFileSync(pdfName));
+		console.log('creating content');
 		const content = await doc.copyPages(pdf, pdf.getPageIndices());
-		content.forEach(doc.addPage);
+		console.log('adding pages');
+		for (const page of content) {
+			doc.addPage(page);
+		}
 	}
 
 	console.log('writing file');
