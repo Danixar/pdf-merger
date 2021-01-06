@@ -2,27 +2,21 @@ import { PDFDocument } from 'pdf-lib';
 import * as fs from 'fs';
 
 const merge = async (name: string, ...pdfs: string[]) => {
-	console.log('starting');
-	if (pdfs.length < 2) throw new Error('Invalid numnber of arguments');
+	if (pdfs.length < 2) throw new Error('Invalid number of arguments');
 
-	console.log('creating pdf');
 	const doc = await PDFDocument.create();
 
 	console.log('looping');
 	for (const pdfName of pdfs) {
-		console.log(`looping: ${pdfName}`);
-		console.log('creating pdf');
 		const pdf = await PDFDocument.load(fs.readFileSync(pdfName));
-		console.log('creating content');
 		const content = await doc.copyPages(pdf, pdf.getPageIndices());
-		console.log('adding pages');
 		for (const page of content) {
 			doc.addPage(page);
 		}
 	}
 
-	console.log('writing file');
 	fs.writeFileSync(`./${name}`, await doc.save());
+	console.log(`${name} created`);
 };
 
 try {
